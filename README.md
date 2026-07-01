@@ -7,10 +7,6 @@ identified by a commit hash from
 [`brave/adblock-lists-mirror`](https://github.com/brave/adblock-lists-mirror/commits/lists/),
 for local testing of adblock incidents.
 
-```
-status  →  pin --commit <hash>  →  (quit + relaunch Brave)  →  test  →  unpin
-```
-
 ## Install
 
 I've only tested this on MacOS, though other OSes shouldn't be hard to add support for.
@@ -27,6 +23,10 @@ brave-adblock-pin --help
 
 ## Quickstart
 
+```
+status  →  pin --commit <hash>  →  (quit + relaunch Brave)  →  test  →  unpin
+```
+
 ```bash
 # 1. See what's installed / pinned
 brave-adblock-pin status
@@ -40,12 +40,12 @@ brave-adblock-pin pin --commit d2d0243c32146ca27b95807d4a36d44664e9b714
 brave-adblock-pin unpin
 ```
 
-After step 2, confirm at `brave://components` that the "Brave Ad Block Updater"
+After step 2, confirm at `brave://components` that the adblock default components
 entries show the pin version `99.0.0`.
 
 ### Verifying a pin
 
-- `brave://components` shows the "Brave Ad Block Updater" entries at
+- `brave://components` shows the default adblock components entries at
   `99.0.0`, and the on-disk `<component_id>/99.0.0/list.txt` is the pinned commit's
   content. 
 - if you want to *see* a rule take effect, note that Brave only does
