@@ -1,0 +1,35 @@
+{
+  "name": "brave-adblock-pin",
+  "version": "0.0.1",
+  "description": "Pin a local Brave browser to an older version of the adblock filter lists, by mirror commit hash, for local testing.",
+  "type": "module",
+  "bin": {
+    "brave-adblock-pin": "src/pin-adblock.ts"
+  },
+  "scripts": {
+    "pin": "node src/pin-adblock.ts pin",
+    "unpin": "node src/pin-adblock.ts unpin",
+    "status": "node src/pin-adblock.ts status",
+    "list": "node src/pin-adblock.ts list",
+    "test": "node --test test/*.test.ts"
+  },
+  "keywords": [
+    "brave",
+    "adblock",
+    "filter-lists",
+    "component-updater",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brave-experiments/brave-adblock-pin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brave-experiments/brave-adblock-pin/issues"
+  },
+  "homepage": "https://github.com/brave-experiments/brave-adblock-pin#readme",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "license": "MPL-2.0"
+}
